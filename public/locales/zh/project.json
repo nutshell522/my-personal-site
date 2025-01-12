@@ -1,0 +1,20 @@
+{
+  "title": "專案/作品集",
+  "items": [
+    {
+      "name": "銀行權益平台",
+      "description": "提供銀行員工查看最新消息、活動報名及常見問題查詢。",
+      "technologies": ["Docker", "Spring Boot", "React", "TypeScript"],
+      "tasks": [
+        "開發後台活動管理與 Excel 匯出功能。",
+        "開發前台活動報名表單及搜尋功能。"
+      ]
+    },
+    {
+      "name": "原物料及產量管理網站",
+      "description": "提供標籤維護功能及產量維護表格，支援 Excel 匯入匯出。",
+      "technologies": [".Net Core", "React", "TypeScript"],
+      "tasks": ["開發維護功能及資料同步。", "確保系統數據一致性與準確性。"]
+    }
+  ]
+}

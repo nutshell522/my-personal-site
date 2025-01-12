@@ -1,0 +1,9 @@
+{
+  "name": "殷易暄/Ted Yin",
+  "title": "前端工程師",
+  "description": "我是一位前端工程師，專注於開發網頁應用程式。",
+  "typeAnimation": {
+    "sentenceHead": "我",
+    "sentences": ["是前端工程師", "喜歡學習新技術", "熱愛撰寫程式"]
+  }
+}
