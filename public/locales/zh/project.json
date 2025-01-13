@@ -3,7 +3,7 @@
   "items": [
     {
       "name": "銀行權益平台",
-      "description": "提供銀行員工查看最新消息、活動報名及常見問題查詢。",
+      "description": "提供銀行會員查看最新消息、活動報名及常見問題查詢。",
       "technologies": ["Docker", "Spring Boot", "React", "TypeScript"],
       "tasks": [
         "開發後台活動管理與 Excel 匯出功能。",

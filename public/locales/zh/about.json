@@ -36,7 +36,7 @@
         "position": "全端開發班",
         "date": "2023 年 1 月 - 2023 年 9 月",
         "tasks": [
-          "學習主要語言：C#、JavaScript，熟悉 MVC 架構與三層式架構。",
+          "主要學習技術：.Net Core 6、.Net MVC、jQuery、Vue3。熟悉 MVC 架構與三層式架構。",
           "擔任專題開發組長，負責技術指導與專案整合。"
         ]
       }
@@ -47,7 +47,7 @@
     "categories": [
       {
         "category": "前端",
-        "items": ["React", "Vue", "TypeScript", "HTML", "CSS", "Sass"]
+        "items": ["React", "Vue", "jQuery", "TypeScript", "HTML", "CSS", "Sass"]
       },
       {
         "category": "後端",
