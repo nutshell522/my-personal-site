@@ -1,10 +1,5 @@
 {
   "title": "關於我",
-  "bio": [
-    "自 2022 年開始自學程式，2023 年加入資展國際學習，對技術學習與優化開發充滿熱忱。擅長嘗試新方法、優化程式碼及提升擴充性。",
-    "喜歡分享所學與討論解決方案，在資展專題開發時期擔任組長，負責技術指導與專案整合，並與組員緊密合作。",
-    "目前任職於直通國際股份有限公司，擔任全端工程師，參與多個專案，負責功能設計與開發，專注於前後端技術與系統整合。"
-  ],
   "experience": {
     "title": "經歷",
     "items": [
@@ -12,19 +7,19 @@
         "company": "直通國際股份有限公司",
         "position": "全端工程師",
         "date": "2023 年 10 月 - 現在",
-        "projects": [
+        "tasks": [
           {
-            "name": "銀行權益平台",
-            "description": "使用 Docker、Spring Boot、React 等技術，開發前後台功能。",
-            "tasks": [
-              "後台功能：活動管理、審核、發布及 Excel 匯出。",
-              "前台功能：活動報名表單、最新消息與常見問題的搜尋。"
+            "name": "專案：銀行權益平台",
+            "descriptions": [
+              "使用 Docker、Spring Boot、React 等技術，開發前後台功能。",
+              "後台功能開發：活動管理、審核、發布及 Excel 匯出。",
+              "前台功能開發：活動報名表單、最新消息與常見問題的搜尋。"
             ]
           },
           {
-            "name": "原物料及產量管理網站",
-            "description": "開發標籤維護功能及產量維護表格。",
-            "tasks": [
+            "name": "專案：企業產量管理網站",
+            "descriptions": [
+              "開發標籤維護功能及產量維護表格。",
               "資料同步，整合數據至不同資料庫，確保一致性。",
               "支援 Excel 匯入匯出功能。"
             ]
@@ -36,8 +31,15 @@
         "position": "全端開發班",
         "date": "2023 年 1 月 - 2023 年 9 月",
         "tasks": [
-          "主要學習技術：.Net Core 6、.Net MVC、jQuery、Vue3。熟悉 MVC 架構與三層式架構。",
-          "擔任專題開發組長，負責技術指導與專案整合。"
+          {
+            "name": "專案：運動品牌電商網站",
+            "descriptions": [
+              "使用 .Net Core 6、.Net MVC、jQuery、Vue3 等技術。",
+              "擔任專題開發組長，負責技術指導與專案整合。",
+              "後臺折扣維護功能。切版及響應式布局實現。",
+              "前台購物車、結帳流程等功能。切版及響應式布局實現。"
+            ]
+          }
         ]
       }
     ]
@@ -47,15 +49,35 @@
     "categories": [
       {
         "category": "前端",
-        "items": ["React", "Vue", "jQuery", "TypeScript", "HTML", "CSS", "Sass"]
+        "items": [
+          "React",
+          "Vue",
+          "jQuery",
+          "TypeScript",
+          "Sass",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Bootstrap",
+          "React Router"
+        ]
       },
       {
         "category": "後端",
-        "items": [".Net Core", "Spring Boot", "Node.js", "Express"]
+        "items": [
+          ".Net Core",
+          "Spring Boot",
+          "SQL Server",
+          "Oracle",
+          "postgreSQL"
+        ]
       },
       {
         "category": "其他",
-        "items": ["Git", "Docker", "CI/CD", "Agile"]
+        "items": ["Git", "Docker"]
+      },
+      {
+        "category": "語言",
+        "items": ["中文", "日文"]
       }
     ]
   }

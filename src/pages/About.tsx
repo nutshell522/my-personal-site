@@ -1,51 +1,57 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
+interface Task {
+  name: string;
+  descriptions: string[];
+}
+
+interface ExperienceItem {
+  company: string;
+  position: string;
+  date: string;
+  tasks: Task[];
+}
+
+interface SkillCategory {
+  category: string;
+  items: string[];
+}
+
 const About: React.FC = () => {
   const { t } = useTranslation('about');
 
-  const bio = (t('bio', { returnObjects: true }) as string[]) || [];
   const experienceItems =
-    (t('experience.items', { returnObjects: true }) as any[]) || [];
-
-  console.log(experienceItems);
+    (t('experience.items', { returnObjects: true }) as ExperienceItem[]) || [];
   const skillsCategories =
-    (t('skills.categories', { returnObjects: true }) as any[]) || [];
+    (t('skills.categories', { returnObjects: true }) as SkillCategory[]) || [];
 
   return (
     <div className="p-8 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
       <h1 className="text-4xl font-bold mb-6">{t('title')}</h1>
 
-      <div className="space-y-4 mb-8">
-        {bio.map((paragraph, index) => (
-          <p key={index} className="text-lg">
-            {paragraph}
-          </p>
-        ))}
-      </div>
-
       <section className="mb-8">
         <h2 className="text-3xl font-semibold mb-4">{t('experience.title')}</h2>
-        {/* {experienceItems.map((item, index) => (
+        {experienceItems.map((item, index) => (
           <div key={index} className="mb-6">
             <h3 className="text-2xl font-bold">{item.company}</h3>
             <p className="text-lg italic mb-2">
               {item.position} | {item.date}
             </p>
             <ul className="list-disc list-inside space-y-2">
-              {item.projects.map((project, projectIndex) => (
-                <li key={projectIndex}>
-                  <strong>{project.name}:</strong> {project.description}
+              {item.tasks.map((task, taskIndex) => (
+                <li key={taskIndex}>
+                  <strong>{task.name}:</strong>
                   <ul className="list-disc list-inside pl-4 space-y-1">
-                    {project.tasks.map((task, taskIndex) => (
-                      <li key={taskIndex}>{task}</li>
+                    {task.descriptions.map((desc, descIndex) => (
+                      <li key={descIndex}>{desc}</li>
                     ))}
                   </ul>
                 </li>
               ))}
             </ul>
           </div>
-        ))} */}
+        ))}
       </section>
 
       <section>

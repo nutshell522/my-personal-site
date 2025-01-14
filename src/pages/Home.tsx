@@ -5,6 +5,7 @@ import sharedInfo from '../../public/datas/sharedInfo.json';
 
 const Home: React.FC = () => {
   const { t } = useTranslation('home');
+  const bio = t('bio', { returnObjects: true }) as string[];
   const avatar = sharedInfo.avatar;
 
   return (
@@ -19,8 +20,7 @@ const Home: React.FC = () => {
       <h1 className="text-4xl font-bold mb-4">{t('name')}</h1>
       {/* 職業 */}
       <h2 className="text-2xl font-semibold mb-6">{t('title')}</h2>
-      {/* 介紹 */}
-      <p className="text-lg mb-6">{t('description')}</p>
+
       {/* 打字動畫 */}
       <div className="text-xl font-semibold">
         <span>{t('typeAnimation.sentenceHead')} </span>
@@ -34,6 +34,14 @@ const Home: React.FC = () => {
           loop
         />
       </div>
+
+      {/* 介紹 */}
+      {bio.map((b, index) => (
+        <p key={index} className="text-lg mb-2">
+          {b}
+        </p>
+      ))}
+      {/* <p className="text-lg mb-6">{t('description')}</p> */}
     </div>
   );
 };

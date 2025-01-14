@@ -58,8 +58,8 @@ const Layout: React.FC = () => {
           </li>
           <li className="mb-2">
             <Link
-              to="/portfolio"
-              className={getLinkClass('/portfolio')}
+              to="/projects"
+              className={getLinkClass('/projects')}
               aria-label="作品集"
             >
               <HiOutlineLightBulb className="mr-2" />
