@@ -1,15 +1,16 @@
-import Layout from './components/layout/layout';
+import Layout from './components/layout/Layout';
 import AppRoutes from './AppRoutes';
+import React from 'react';
+import { useDarkMode } from './context/DarkModeContext';
 
 const App: React.FC = () => {
+  const { isDarkMode } = useDarkMode();
+
   return (
-    <div className="app w-screen h-screen flex">
-      <Layout />
-      <main
-        className={`w-full h-screen bg-gray-200 dark:bg-gray-900 overflow-scroll`}
-      >
+    <div className={`app w-screen h-screen flex ${isDarkMode ? 'dark' : ''}`}>
+      <Layout>
         <AppRoutes />
-      </main>
+      </Layout>
     </div>
   );
 };

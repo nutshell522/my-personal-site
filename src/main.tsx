@@ -4,11 +4,14 @@ import './assets/styles/base.scss';
 import App from './App.tsx';
 import { BrowserRouter } from 'react-router-dom';
 import './i18n';
+import { DarkModeProvider } from './context/DarkModeProvider.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <DarkModeProvider>
+        <App />
+      </DarkModeProvider>
     </BrowserRouter>
   </StrictMode>
 );

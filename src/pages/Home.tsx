@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ReactTyped } from 'react-typed';
 import sharedInfo from '../../public/datas/sharedInfo.json';
+import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
   const { t } = useTranslation('home');
@@ -9,7 +10,14 @@ const Home: React.FC = () => {
   const avatar = sharedInfo.avatar;
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="transition-colors duration-300 flex flex-col items-center justify-center h-screen text-gray-800 dark:text-gray-200"
+    >
+      {/* <div className="flex flex-col items-center justify-center h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200"> */}
       {/* 大頭貼 */}
       <img
         src={`/assets/images/personal/${avatar}`}
@@ -42,7 +50,8 @@ const Home: React.FC = () => {
         </p>
       ))}
       {/* <p className="text-lg mb-6">{t('description')}</p> */}
-    </div>
+      {/* </div> */}
+    </motion.div>
   );
 };
 
