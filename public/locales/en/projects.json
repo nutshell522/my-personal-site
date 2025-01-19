@@ -1,0 +1,91 @@
+{
+  "items": [
+    {
+      "name": "Raw Materials and Production Management Website",
+      "images": [],
+      "description": "Provides label maintenance features and production tables, supporting Excel import and export.",
+      "technologies": [
+        ".Net Core",
+        "React",
+        "TypeScript",
+        "Sass",
+        "Material-UI",
+        "MS SQL",
+        "Vite"
+      ],
+      "tasks": [
+        "Developed maintenance features and data synchronization.",
+        "Ensured consistency and accuracy of system data."
+      ]
+    },
+    {
+      "name": "Banking Benefits Platform",
+      "images": [],
+      "description": "Allows banking members to view the latest news, register for events, and search FAQs.",
+      "technologies": [
+        "Docker",
+        "Spring Boot",
+        "React",
+        "TypeScript",
+        "Sass",
+        "PostgreSQL",
+        "Vite"
+      ],
+      "tasks": [
+        "Developed backend activity management and Excel export features.",
+        "Developed frontend event registration forms and search functionalities."
+      ]
+    },
+    {
+      "name": "Flex Sports Brand E-commerce Website - Frontend",
+      "images": [
+        {
+          "src": "flex2023_client/螢幕擷取畫面 2023-08-30 001033.png",
+          "alt": "Flex Website Frontend"
+        },
+        {
+          "src": "flex2023_client/螢幕擷取畫面 2023-08-30 001017.png",
+          "alt": "Flex Website Frontend"
+        },
+        {
+          "src": "flex2023_client/螢幕擷取畫面 2023-08-30 001041.png",
+          "alt": "Flex Website Frontend"
+        }
+      ],
+      "description": "Provides backend discount maintenance and frontend shopping cart and checkout processes.",
+      "technologies": [
+        ".Net Core",
+        "Vue",
+        "TypeScript",
+        "Sass",
+        "Bootstrap",
+        "Vite"
+      ],
+      "tasks": [
+        "Developed shopping cart and checkout processes.",
+        "Implemented responsive layouts and website structure."
+      ],
+      "github": "https://github.com/nutshell522/Flex"
+    },
+    {
+      "name": "Flex Sports Brand E-commerce Website - Backend",
+      "images": [
+        {
+          "src": "flex2023_admin/螢幕擷取畫面 2023-08-06 114930.png",
+          "alt": "Flex Website Backend"
+        },
+        {
+          "src": "flex2023_admin/螢幕擷取畫面 2023-08-06 114906.png",
+          "alt": "Flex Website Backend"
+        }
+      ],
+      "description": "Provides backend discount maintenance and frontend shopping cart and checkout processes.",
+      "technologies": [".Net Core MVC", "jQuery", "Bootstrap"],
+      "tasks": [
+        "Implemented discount and coupon management features.",
+        "Developed responsive layouts and website structure."
+      ],
+      "github": "https://github.com/nutshell522/flex_backend_MVC"
+    }
+  ]
+}

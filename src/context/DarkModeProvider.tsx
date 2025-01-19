@@ -5,12 +5,12 @@ export const DarkModeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    const savedMode = localStorage.getItem('tedYinResumeDarkMode');
+    const savedMode = localStorage.getItem('darkMode');
     return savedMode ? JSON.parse(savedMode) : false;
   });
 
   useEffect(() => {
-    localStorage.setItem('tedYinResumeDarkMode', JSON.stringify(isDarkMode));
+    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
   }, [isDarkMode]);
 
   const toggleDarkMode = () => {

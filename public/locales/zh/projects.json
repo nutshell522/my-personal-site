@@ -1,10 +1,4 @@
 {
-  "title": "專案/作品集",
-  "technologiesTitle": "使用技術",
-  "tasksTitle": "工作內容",
-  "githubButton": "GitHub",
-  "sourceButton": "原始碼",
-  "demoButton": "Demo",
   "items": [
     {
       "name": "原物料及產量管理網站",

@@ -1,0 +1,30 @@
+{
+  "navbarUI": {
+    "home": "首頁",
+    "about": "關於我",
+    "projects": "專案",
+    "contact": "聯絡資訊"
+  },
+  "aboutUI": {
+    "title": "關於我",
+    "experience": {
+      "title": "經歷"
+    },
+    "skills": {
+      "title": "技能"
+    }
+  },
+  "projectsUI": {
+    "title": "專案/作品集",
+    "technologiesTitle": "使用技術",
+    "tasksTitle": "工作內容",
+    "buttons": {
+      "github": "GitHub",
+      "source": "原始碼",
+      "demo": "Demo"
+    }
+  },
+  "contactUI": {
+    "title": "聯絡資訊"
+  }
+}
