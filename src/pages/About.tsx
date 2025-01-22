@@ -15,7 +15,7 @@ const About: React.FC = () => {
     (t('skills.categories', { returnObjects: true }) as SkillCategory[]) || [];
 
   return (
-    <div className="p-8 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <div className="p-8 text-gray-800 dark:text-gray-200">
       <h1 className="text-4xl font-bold mb-6">{aboutTitle}</h1>
 
       <section className="mb-8">

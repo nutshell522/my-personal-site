@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
   const { github, email, phone, linkedin } = sharedInfo;
 
   return (
-    <div className="p-8 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <div className="p-8 text-gray-800 dark:text-gray-200">
       <h1 className="text-4xl font-bold mb-6">{t('title')}</h1>
 
       <ul className="list-disc list-inside space-y-4">

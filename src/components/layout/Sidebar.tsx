@@ -52,10 +52,10 @@ const Sidebar: React.FC<{
                 >
                   {/* 動畫條 */}
                   <div
-                    className={`absolute bottom-0 left-0 h-1 bg-nav-bar-active transition-all duration-500 z-0 ${
+                    className={`absolute bottom-0 left-0 h-1 bg-nav-bar-active-dark transition-all duration-500 z-0 ${
                       isActive
-                        ? 'w-full opacity-100'
-                        : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-100'
+                        ? 'w-full'
+                        : 'w-0 group-hover:w-full group-hover:opacity-100'
                     }`}
                   ></div>
                   <Icon className="mr-2 relative z-10" />

@@ -11,7 +11,7 @@ const Header: React.FC = () => {
       {/* header 左側 */}
       <div className="h-full flex items-center ml-4">
         {/* Logo */}
-        <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200 rounded-full bg-white overflow-hidden inline-block">
+        <h1 className="text-3xl font-bold text-gray-500 dark:text-gray-500 rounded-full bg-white overflow-hidden inline-block">
           <Link to="/">TY</Link>
         </h1>
       </div>

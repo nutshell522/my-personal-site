@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ReactTyped } from 'react-typed';
 import sharedInfo from '../../public/datas/sharedInfo.json';
@@ -7,6 +7,10 @@ const Home: React.FC = () => {
   const { t } = useTranslation('home');
   const bio = t('bio', { returnObjects: true }) as string[];
   const avatar = sharedInfo.avatar;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="transition-colors duration-300 flex flex-col items-center justify-center h-screen text-gray-800 dark:text-gray-200">
