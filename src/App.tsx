@@ -1,4 +1,4 @@
-import Layout from './components/layout/Layout';
+import Layout from './components/layout/Layout1';
 import AppRoutes from './AppRoutes';
 import React from 'react';
 import { useDarkMode } from './context/DarkModeContext';
