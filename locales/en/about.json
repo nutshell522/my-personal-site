@@ -1,0 +1,81 @@
+{
+  "experience": {
+    "items": [
+      {
+        "company": "ESi TECHNOLOGY Ltd.",
+        "position": "Full Stack Engineer",
+        "date": "October 2023 - Present",
+        "tasks": [
+          {
+            "name": "Project: Banking Benefits Platform",
+            "descriptions": [
+              "Developed frontend and backend features using technologies such as Docker, Spring Boot, and React.",
+              "Backend features: Activity editing, review, approval, publishing, and Excel export.",
+              "Frontend features: Activity registration forms, news updates, and FAQ search."
+            ]
+          },
+          {
+            "name": "Project: Corporate Production Management Website",
+            "descriptions": [
+              "Developed label maintenance and production table features.",
+              "Implemented data synchronization across multiple databases to ensure consistency.",
+              "Supported Excel import and export functionality."
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Tech-Career Learning Center",
+        "position": "Full Stack Development Program",
+        "date": "January 2023 - September 2023",
+        "tasks": [
+          {
+            "name": "Project: Sports Brand E-commerce Website",
+            "descriptions": [
+              "Used technologies such as .Net Core 6, .Net MVC, jQuery, and Vue3.",
+              "Served as team leader for the capstone project, responsible for technical guidance and project integration.",
+              "Backend discount management functionality; implemented responsive layouts.",
+              "Frontend shopping cart and checkout process functionality; implemented responsive layouts."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "categories": [
+      {
+        "category": "Frontend",
+        "items": [
+          "React",
+          "Vue",
+          "jQuery",
+          "TypeScript",
+          "Sass",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Bootstrap",
+          "React Router"
+        ]
+      },
+      {
+        "category": "Backend",
+        "items": [
+          ".Net Core",
+          "Spring Boot",
+          "SQL Server",
+          "Oracle",
+          "postgreSQL"
+        ]
+      },
+      {
+        "category": "Others",
+        "items": ["Git", "Docker"]
+      },
+      {
+        "category": "Languages",
+        "items": ["Chinese", "Japanese"]
+      }
+    ]
+  }
+}

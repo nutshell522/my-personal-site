@@ -1,0 +1,81 @@
+{
+  "experience": {
+    "items": [
+      {
+        "company": "直通國際股份有限公司",
+        "position": "全端工程師",
+        "date": "2023 年 10 月 - 現在",
+        "tasks": [
+          {
+            "name": "專案：銀行權益平台",
+            "descriptions": [
+              "使用 Docker、Spring Boot、React 等技術，開發前後台功能。",
+              "後台功能開發：活動編輯、審核、放行、發布及 Excel 匯出。",
+              "前台功能開發：活動報名表單、最新消息與常見問題的搜尋。"
+            ]
+          },
+          {
+            "name": "專案：企業產量管理網站",
+            "descriptions": [
+              "開發標籤維護功能及產量維護表格。",
+              "資料同步，整合數據至不同資料庫，確保一致性。",
+              "支援 Excel 匯入匯出功能。"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "資展國際學習",
+        "position": "全端開發班",
+        "date": "2023 年 1 月 - 2023 年 9 月",
+        "tasks": [
+          {
+            "name": "專案：運動品牌電商網站",
+            "descriptions": [
+              "使用 .Net Core 6、.Net MVC、jQuery、Vue3 等技術。",
+              "擔任專題開發組長，負責技術指導與專案整合。",
+              "後臺折扣維護功能。切版及響應式布局實現。",
+              "前台購物車、結帳流程等功能。切版及響應式布局實現。"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "categories": [
+      {
+        "category": "前端",
+        "items": [
+          "React",
+          "Vue",
+          "jQuery",
+          "TypeScript",
+          "Sass",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Bootstrap",
+          "React Router"
+        ]
+      },
+      {
+        "category": "後端",
+        "items": [
+          ".Net Core",
+          "Spring Boot",
+          "SQL Server",
+          "Oracle",
+          "postgreSQL"
+        ]
+      },
+      {
+        "category": "其他",
+        "items": ["Git", "Docker"]
+      },
+      {
+        "category": "語言",
+        "items": ["中文", "日文"]
+      }
+    ]
+  }
+}

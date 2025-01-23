@@ -1,0 +1,22 @@
+{
+  "name": "Yi Hsuan, Yin/Ted Yin",
+  "title": "Frontend Engineer / Full Stack Engineer",
+  "education": {
+    "school": "National Kaohsiung University of Hospitality and Tourism",
+    "degree": "Bachelor's Degree",
+    "major": "Department of Applied Japanese",
+    "date": "September 2012 - June 2016"
+  },
+  "bio": [
+    "Started self-learning programming in 2022 and joined Tech-Career Learning Center in 2023. Passionate about learning new technologies and optimization.",
+    "Currently working at Direct International Co., Ltd. as a Full Stack Engineer."
+  ],
+  "typeAnimation": {
+    "sentenceHead": "I",
+    "sentences": [
+      "am a Frontend Engineer",
+      "enjoy learning new technologies",
+      "love writing code"
+    ]
+  }
+}

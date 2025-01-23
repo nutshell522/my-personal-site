@@ -1,0 +1,30 @@
+{
+  "navbarUI": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "aboutUI": {
+    "title": "About Me",
+    "experience": {
+      "title": "Experience"
+    },
+    "skills": {
+      "title": "Skills"
+    }
+  },
+  "projectsUI": {
+    "title": "Projects/Portfolio",
+    "technologiesTitle": "Technologies Used",
+    "tasksTitle": "Tasks",
+    "buttons": {
+      "github": "GitHub",
+      "source": "Source Code",
+      "demo": "Demo"
+    }
+  },
+  "contactUI": {
+    "title": "Contact Information"
+  }
+}
