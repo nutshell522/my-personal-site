@@ -7,7 +7,7 @@ import DarkModeSwitcher from '../DarkModeSwitcher';
  */
 const Header: React.FC = () => {
   return (
-    <header className="bg-gray-300 dark:bg-gray-700 w-full flex justify-between items-center h-16">
+    <header className="bg-gray-50 dark:bg-gray-700 w-full flex justify-between items-center h-16">
       {/* header 左側 */}
       <div className="h-full flex items-center ml-4">
         {/* Logo */}

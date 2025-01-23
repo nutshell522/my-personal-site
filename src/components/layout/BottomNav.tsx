@@ -14,7 +14,7 @@ const BottomNav: React.FC<{
 }> = ({ navItems }) => {
   const location = useLocation();
 
-  // 判斷當前路徑是否為活動狀態
+  // 判斷路徑是否為active狀態
   const getLinkClass = (path: string) => {
     const isActive = location.pathname === path;
     return `relative flex flex-col items-center group ${
@@ -27,7 +27,7 @@ const BottomNav: React.FC<{
   return (
     <nav
       aria-label="Bottom Navigation"
-      className="h-11 w-full bg-gray-100 dark:bg-gray-800 sm:hidden flex justify-around items-center py-8 px-5 dark:text-gray-300 z-10"
+      className="h-11 w-full bg-gray-50 dark:bg-gray-800 sm:hidden flex justify-around items-center py-8 px-5 dark:text-gray-300 z-10"
     >
       {navItems.map(({ path, label, Icon }) => {
         const isActive = location.pathname === path;
@@ -42,7 +42,7 @@ const BottomNav: React.FC<{
             {/* 動畫條 */}
             <div
               className={`absolute top-8 h-2 translate-x-0.5 bg-nav-bar-active-dark transition-all duration-300 z-0
-                ${isActive ? 'w-125%' : 'w-0'} group-hover:w-40%`}
+                ${isActive ? 'w-125%' : 'w-0'} group-hover:w-125%`}
             ></div>
             {/* 圖標 */}
             <Icon className="text-xl relative z-10" />

@@ -3,12 +3,13 @@ import { useTranslation } from 'react-i18next';
 import sharedInfo from '../../public/datas/sharedInfo.json';
 
 const Contact: React.FC = () => {
-  const { t } = useTranslation('contact');
+  const { t } = useTranslation('ui');
+  const contactTitle = t('contactUI.title');
   const { github, email, phone, linkedin } = sharedInfo;
 
   return (
     <div className="p-8 text-gray-800 dark:text-gray-200">
-      <h1 className="text-4xl font-bold mb-6">{t('title')}</h1>
+      <h1 className="text-4xl font-bold mb-6">{contactTitle}</h1>
 
       <ul className="list-disc list-inside space-y-4">
         <li>

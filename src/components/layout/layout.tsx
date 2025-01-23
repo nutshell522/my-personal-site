@@ -65,7 +65,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       {/* 側邊導航 桌面/平板版畫面 */}
       <Sidebar navItems={navItems} />
 
-      <div className="w-full h-screen bg-gray-200 dark:bg-gray-900 transition-all duration-300 overflow-hidden flex flex-col">
+      <div className="w-full h-screen bg-gray-100 dark:bg-gray-900 transition-all duration-300 overflow-hidden flex flex-col">
         {/* 頁首 */}
         <Header />
 
