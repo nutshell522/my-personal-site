@@ -10,7 +10,7 @@ const DarkModeSwitcher: React.FC = () => {
 
   return (
     <label
-      className="relative flex items-center justify-between w-12 h-6 bg-gray-400 rounded-full cursor-pointer dark:bg-gray-600"
+      className="relative flex items-center justify-between w-12 h-6 rounded-full cursor-pointer bg-darkModeSwitcher-bgLight dark:bg-darkModeSwitcher-bgDark"
       aria-label="Dark mode toggle"
     >
       {/* 隱藏的切換按鈕 */}
@@ -22,12 +22,15 @@ const DarkModeSwitcher: React.FC = () => {
       />
 
       {/* 切換滑塊 */}
-      <span className="absolute top-0 left-0 w-6 h-6 bg-white rounded-full transition-transform duration-300 transform dark:translate-x-full flex items-center justify-center dark:bg-gray-400">
+      <span className="absolute top-0 left-0 w-6 h-6 rounded-full transition-transform duration-300 transform dark:translate-x-full flex items-center justify-center bg-darkModeSwitcher-sliderLight dark:bg-darkModeSwitcher-sliderDark">
         {isDarkMode ? (
-          <IoMdMoon className="text-gray-800" aria-label="Dark mode enabled" />
+          <IoMdMoon
+            className="text-darkModeSwitcher-moonIcon"
+            aria-label="Dark mode enabled"
+          />
         ) : (
           <IoMdSunny
-            className="text-yellow-500"
+            className="text-darkModeSwitcher-sunIcon"
             aria-label="Light mode enabled"
           />
         )}

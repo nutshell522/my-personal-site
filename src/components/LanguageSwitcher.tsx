@@ -1,5 +1,6 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { languages } from '../i18n';
 
 /**
  * 語言切換組件
@@ -12,16 +13,6 @@ const LanguageSwitcher: React.FC = () => {
 
   // 當前顯示的語言文字
   const [currentLanguageLabel, setCurrentLanguageLabel] = useState('');
-
-  // 語言選項列表
-  const languageOptions = useMemo(
-    () => [
-      { key: 'zh', label: '中文' },
-      { key: 'en', label: 'English' },
-      { key: 'ja', label: '日本語' },
-    ],
-    []
-  );
 
   // 當前語言代碼
   const currentLanguageKey = i18n.language;
@@ -38,11 +29,11 @@ const LanguageSwitcher: React.FC = () => {
 
   // 根據目前語言key更新顯示的語言文字
   useEffect(() => {
-    const selectedOption = languageOptions.find(
+    const selectedOption = languages.find(
       (option) => option.key === currentLanguageKey
     );
     setCurrentLanguageLabel(selectedOption?.label || '');
-  }, [currentLanguageKey, languageOptions]);
+  }, [currentLanguageKey]);
 
   return (
     <div
@@ -52,7 +43,7 @@ const LanguageSwitcher: React.FC = () => {
     >
       {/* 顯示目前語言 */}
       <div
-        className={`h-full text-gray-800 dark:text-gray-200 ${isDropdownVisible ? 'bg-gray-200 dark:bg-gray-600' : ''} rounded flex items-center justify-center`}
+        className={`h-full ${isDropdownVisible ? 'bg-gray-200 dark:bg-gray-600' : ''} rounded flex items-center justify-center`}
         onClick={() => setDropdownVisible((prev) => !prev)}
       >
         {currentLanguageLabel}
@@ -61,7 +52,7 @@ const LanguageSwitcher: React.FC = () => {
       {/* 下拉選單 */}
       {isDropdownVisible && (
         <div className="absolute top-full bg-white dark:bg-gray-800 border rounded shadow-lg z-50">
-          {languageOptions.map((option) => (
+          {languages.map((option) => (
             <button
               key={option.key}
               onClick={() => handleLanguageChange(option.key)}

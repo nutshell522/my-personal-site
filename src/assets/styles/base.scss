@@ -7,7 +7,10 @@
 
 /* Custom CSS */
 * {
-  font-family: 'Noto Sans TC', serif;
+  font-family: 'Helvetica', 'Arial', 'LiHei Pro', '黑體-繁', '微軟正黑體',
+    sans-serif;
+  // 使用'-'當list-style
+  list-style: '- ';
 }
 
 /* width */

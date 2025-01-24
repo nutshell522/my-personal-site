@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { PiBriefcaseThin } from 'react-icons/pi';
+import { PiBriefcaseLight } from 'react-icons/pi';
 import { BsPerson } from 'react-icons/bs';
 import { GoComment } from 'react-icons/go';
 import { HiOutlineLightBulb } from 'react-icons/hi2';
@@ -23,7 +23,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const navItems = useMemo(
     () => [
       { path: '/', label: t('navbarUI.home'), Icon: BsPerson },
-      { path: '/about', label: t('navbarUI.about'), Icon: PiBriefcaseThin },
+      { path: '/about', label: t('navbarUI.about'), Icon: PiBriefcaseLight },
       {
         path: '/projects',
         label: t('navbarUI.projects'),
@@ -65,12 +65,15 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       {/* 側邊導航 桌面/平板版畫面 */}
       <Sidebar navItems={navItems} />
 
-      <div className="w-full h-screen bg-gray-100 dark:bg-gray-900 transition-all duration-300 overflow-hidden flex flex-col">
+      <div className="w-full h-screen overflow-hidden flex flex-col">
         {/* 頁首 */}
         <Header />
 
         {/* 主內容區域 */}
-        <main className="w-full h-full overflow-y-scroll" ref={mainRef}>
+        <main
+          className="w-full h-full overflow-y-scroll text-main-lightText dark:text-main-darkText"
+          ref={mainRef}
+        >
           <motion.div
             key={location.pathname}
             initial={{

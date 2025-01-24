@@ -22,8 +22,8 @@ const Projects: React.FC = () => {
   const projects = t('items', { returnObjects: true }) as ProjectItem[];
 
   return (
-    <div className="p-8 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-      <h1 className="text-4xl font-bold mb-6">{title}</h1>
+    <div className="p-8">
+      <h2 className="text-3xl font-bold mb-8 text-center">{title}</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
@@ -60,6 +60,8 @@ const ProjectCard: React.FC<{
   sourceButton,
   demoButton,
 }) => {
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [direction, setDirection] = useState(0); // 紀錄滑動方向
 
@@ -117,7 +119,7 @@ const ProjectCard: React.FC<{
 
   return (
     <div className="p-4 border rounded-lg bg-white dark:bg-gray-800 shadow">
-      <h2 className="text-2xl font-bold mb-2">{project.name}</h2>
+      <h3 className="text-2xl font-bold mb-2">{project.name}</h3>
       <p className="mb-4">{project.description}</p>
 
       {/* 圖片輪播 */}
@@ -132,7 +134,7 @@ const ProjectCard: React.FC<{
           {/* 主圖片滑動 */}
           <motion.img
             key={currentImageIndex}
-            src={`/assets/images/projects/${project.images[currentImageIndex].src}`}
+            src={`${baseUrl}assets/images/projects/${project.images[currentImageIndex].src}`}
             alt={project.images[currentImageIndex].alt}
             className="w-full h-auto rounded mb-2"
             initial={{ x: direction === 1 ? 300 : -300, opacity: 0 }}
@@ -176,7 +178,7 @@ const ProjectCard: React.FC<{
       ) : (
         <div>
           <img
-            src="/assets/images/no-image.png"
+            src={`${baseUrl}assets/images/no-image.png`}
             alt="No image"
             className="w-full h-auto rounded mb-2"
           />

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://nutshell522.github.io/my-resume/",
+  "homepage": "https://nutshell522.github.io/resume/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -14,7 +14,10 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@types/react-router-dom": "^5.3.3",
+    "dotenv": "^16.4.7",
+    "emailjs": "^4.0.3",
     "framer-motion": "^11.16.1",
     "gh-pages": "^6.3.0",
     "i18next": "^24.2.1",
@@ -32,6 +35,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.10",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",

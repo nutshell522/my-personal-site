@@ -8,9 +8,11 @@ const App: React.FC = () => {
 
   return (
     <div className={`app w-screen h-screen flex ${isDarkMode ? 'dark' : ''}`}>
-      <Layout>
-        <AppRoutes />
-      </Layout>
+      <div className="w-full h-full bg-main-lightBg dark:bg-main-darkBg">
+        <Layout>
+          <AppRoutes />
+        </Layout>
+      </div>
     </div>
   );
 };
