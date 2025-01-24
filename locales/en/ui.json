@@ -25,6 +25,15 @@
     }
   },
   "contactUI": {
-    "title": "Contact Information"
+    "title": "Contact Me",
+    "description": "If you're interested in my experience, have any suggestions, or just want to say hello, you're welcome to reach out! 😊",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "sending": "Sending...",
+      "successMessage": "Thank you for reaching out!"
+    }
   }
 }
