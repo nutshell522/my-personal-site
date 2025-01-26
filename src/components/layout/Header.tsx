@@ -5,9 +5,12 @@ import DarkModeSwitcher from '../DarkModeSwitcher';
 /**
  * 頁面頂部標題欄
  */
-const Header: React.FC = () => {
+const Header: React.FC<{ height: number }> = ({ height }) => {
   return (
-    <header className="bg-header-lightBg dark:bg-header-darkBg text-header-lightText dark:text-header-darkText w-full flex justify-between items-center h-12 sm:h-16">
+    <header
+      className="bg-header-lightBg dark:bg-header-darkBg text-header-lightText dark:text-header-darkText w-full flex justify-between items-center"
+      style={{ height: `${height}px` }}
+    >
       {/* header 左側 */}
       <div className="h-full flex items-center ml-4">
         {/* Logo */}

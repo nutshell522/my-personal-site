@@ -6,11 +6,21 @@ import { SkillCategory } from '../../pages/types';
 const SkillCategoryCard: React.FC<{ category: SkillCategory }> = ({
   category,
 }) => (
-  <div>
-    <h3 className="text-2xl font-bold mb-2">{category.category}</h3>
-    <ul className="list-disc list-inside space-y-2 pl-4">
+  <div className="p-6 bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transition-shadow duration-300">
+    {/* 技能類別名稱 */}
+    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+      {category.category}
+    </h3>
+
+    {/* 技能列表 */}
+    <ul className="list-disc list-inside space-y-2">
       {category.items.map((skill, index) => (
-        <li key={index}>{skill}</li>
+        <li
+          key={index}
+          className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
+        >
+          {skill}
+        </li>
       ))}
     </ul>
   </div>

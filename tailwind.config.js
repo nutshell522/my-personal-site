@@ -29,8 +29,8 @@ export default {
           darkText: '#D1D5DB',
         },
         darkModeSwitcher: {
-          bgLight: '#F4F4F4',
-          bgDark: '#1F2937',
+          bgLight: '#E5E7EB',
+          bgDark: '#2D3748',
           sliderLight: '#FFFFFF',
           sliderDark: '#776677',
           sunIcon: '#EAB308',
@@ -42,12 +42,12 @@ export default {
         },
         // 專案頁使用技術標籤
         technologies: {
-          lightBg: '#F9FAFB',
-          darkBg: '#1F2937',
+          lightBg: '#F3F4F6',
+          darkBg: '#374151',
           lightText: '#111827',
           darkText: '#F3F4F6',
-          lightBgHover: '#F3F4F6',
-          darkBgHover: '#2D3748',
+          lightBgHover: '#E5E7EB',
+          darkBgHover: '#4B5563',
           lightTextHover: '#111827',
           darkTextHover: '#F3F4F6',
         },
@@ -65,5 +65,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-safe-area')],
 };

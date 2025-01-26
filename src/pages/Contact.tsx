@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
+import FormField from '../components/contact/FormField';
 
 /**
  * 聯絡我
@@ -64,14 +65,12 @@ const Contact: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-2xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md space-y-6"
+      className="max-w-2xl mx-auto p-8 rounded-lg shadow-md space-y-6"
     >
       {/* 標題與描述 */}
       <header className="text-center">
-        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
-          {title}
-        </h2>
-        <p className="text-gray-700 dark:text-gray-300">{description}</p>
+        <h2 className="text-3xl font-bold mb-8">{title}</h2>
+        <p className="text-gray-600 dark:text-gray-300">{description}</p>
       </header>
 
       {/* 表單欄位 */}
@@ -127,50 +126,5 @@ const Contact: React.FC = () => {
     </form>
   );
 };
-
-/**
- * 表單欄位子元件
- */
-const FormField: React.FC<{
-  id: string;
-  label: string;
-  type: 'text' | 'email' | 'textarea';
-  name: string;
-  value: string;
-  onChange: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => void;
-  required?: boolean;
-}> = ({ id, label, type, name, value, onChange, required = false }) => (
-  <div className="space-y-2">
-    <label
-      htmlFor={id}
-      className="block font-medium text-gray-700 dark:text-gray-300"
-    >
-      {label}
-    </label>
-    {type === 'textarea' ? (
-      <textarea
-        id={id}
-        name={name}
-        value={value}
-        onChange={onChange}
-        required={required}
-        rows={5}
-        className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-400"
-      ></textarea>
-    ) : (
-      <input
-        id={id}
-        type={type}
-        name={name}
-        value={value}
-        onChange={onChange}
-        required={required}
-        className="w-full px-4 py-2 border rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-400"
-      />
-    )}
-  </div>
-);
 
 export default Contact;

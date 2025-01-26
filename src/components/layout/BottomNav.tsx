@@ -11,7 +11,8 @@ const BottomNav: React.FC<{
     label: string;
     Icon: React.FC<{ className?: string }>;
   }[];
-}> = ({ navItems }) => {
+  height: number;
+}> = ({ navItems, height }) => {
   const location = useLocation();
 
   // 判斷路徑是否為active狀態
@@ -27,7 +28,8 @@ const BottomNav: React.FC<{
   return (
     <nav
       aria-label="Bottom Navigation"
-      className="h-9 w-full text-nav-lightText dark:text-nav-darkText bg-nav-lightBg dark:bg-nav-darkBg sm:hidden flex justify-around items-center py-7 px-5 z-10"
+      className="w-full text-nav-lightText dark:text-nav-darkText bg-nav-lightBg dark:bg-nav-darkBg sm:hidden flex justify-around items-center px-5 z-10"
+      style={{ height: `${height}px` }}
     >
       {navItems.map(({ path, label, Icon }) => {
         const isActive = location.pathname === path;

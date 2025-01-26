@@ -22,7 +22,7 @@ const About: React.FC = () => {
     (t('skills.categories', { returnObjects: true }) as SkillCategory[]) || [];
 
   return (
-    <div className="p-8 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <div className="p-8">
       {/* 頁面標題 */}
       <h2 className="text-3xl font-bold mb-8 text-center">{aboutTitle}</h2>
 
