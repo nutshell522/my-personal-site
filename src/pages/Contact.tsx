@@ -63,10 +63,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="max-w-2xl mx-auto p-8 rounded-lg shadow-md space-y-6"
-    >
+    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto p-8 space-y-6">
       {/* 標題與描述 */}
       <header className="text-center">
         <h2 className="text-3xl font-bold mb-8">{title}</h2>

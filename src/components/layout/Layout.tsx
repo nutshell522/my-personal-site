@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { PiBriefcaseLight } from 'react-icons/pi';
-import { BsPerson } from 'react-icons/bs';
 import { GoComment } from 'react-icons/go';
 import { HiOutlineLightBulb } from 'react-icons/hi2';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
 import Header from './Header';
 import BottomNav from './BottomNav';
 
@@ -19,7 +18,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation(); // 取得當前路由位址
   const mainRef = useRef<HTMLDivElement>(null); // 參考主內容區域
 
-  const HEADER_HEIGHT = 46; // Header 固定高度
+  const SMALL_SCREEN_HEADER_HEIGHT = 46; // 小視窗 Header 高度
+  const LARGE_SCREEN_HEADER_HEIGHT = 64; // 大視窗 Header 高度
   const BOTTOM_NAV_HEIGHT = 56; // BottomNav 固定高度
   const SM_BREAKPOINT = 640; // Tailwind CSS 的 sm 尺寸像素值
 
@@ -47,15 +47,19 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // 動態計算 Header 高度
+  const headerHeight = isSmallScreen
+    ? SMALL_SCREEN_HEADER_HEIGHT
+    : LARGE_SCREEN_HEADER_HEIGHT;
+
   // 計算主內容高度
   const mainContentHeight = isSmallScreen
-    ? viewportHeight - HEADER_HEIGHT - BOTTOM_NAV_HEIGHT
-    : viewportHeight - HEADER_HEIGHT;
+    ? viewportHeight - headerHeight - BOTTOM_NAV_HEIGHT
+    : viewportHeight - headerHeight;
 
   // 定義導航項目
   const navItems = useMemo(
     () => [
-      { path: '/', label: t('navbarUI.home'), Icon: BsPerson },
       { path: '/about', label: t('navbarUI.about'), Icon: PiBriefcaseLight },
       {
         path: '/projects',
@@ -129,15 +133,17 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <>
+      {/*  捨棄版本，nav改放header */}
       {/* 側邊導航 (桌面/平板版) */}
-      <Sidebar navItems={navItems} />
+      {/* <Sidebar navItems={navItems} /> */}
 
+      {/* 主頁面佈局 */}
       <div
         className="w-full flex flex-col"
         style={{ height: `${viewportHeight}px` }} // 動態設置高度
       >
         {/* 頁首 */}
-        <Header height={HEADER_HEIGHT} />
+        <Header height={headerHeight} navItems={navItems} />
 
         {/* 主內容區域 */}
         <main
@@ -172,13 +178,14 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+            className="sm:w-full sm:h-full"
           >
             {children}
           </motion.div>
         </main>
 
         {/* 底部導航 (手機版) */}
-        <BottomNav navItems={navItems.slice(1)} height={BOTTOM_NAV_HEIGHT} />
+        <BottomNav navItems={navItems} height={BOTTOM_NAV_HEIGHT} />
 
         {/* Safe area 適配區域 */}
         <div className="pb-safe" />

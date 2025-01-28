@@ -29,7 +29,6 @@ const About: React.FC = () => {
       {/* 經歷區域 */}
       <section className="mb-20">
         <h2 className="text-2xl font-semibold mb-2">{experienceTitle}</h2>
-        <hr className="border-gray-300 dark:border-gray-700 mb-6" />
         {experienceItems.map((item, index) => (
           <ExperienceCard key={index} experience={item} />
         ))}
@@ -38,7 +37,6 @@ const About: React.FC = () => {
       {/* 技能區域 */}
       <section>
         <h2 className="text-2xl font-semibold mb-2">{skillsTitle}</h2>
-        <hr className="border-gray-300 dark:border-gray-700 mb-6" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillsCategories.map((category, index) => (
             <SkillCategoryCard key={index} category={category} />

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      // ? 筆記: 修正重定向問題，避免重複附加 `/resume`
+      // 取得當前的路徑
+      const pathname = window.location.pathname.replace('/resume', ''); // 去掉多餘的 /resume
+      const search = window.location.search; // 查詢參數
+      const hash = window.location.hash; // hash 值
+
+      // 拼接新的 URL 並重定向到正確的 index.html
+      const newUrl = `${window.location.origin}/resume/index.html?redirect=${pathname}${search}${hash}`;
+      window.location.replace(newUrl);
+    </script>
+  </head>
+  <body></body>
+</html>

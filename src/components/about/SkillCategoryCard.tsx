@@ -12,6 +12,8 @@ const SkillCategoryCard: React.FC<{ category: SkillCategory }> = ({
       {category.category}
     </h3>
 
+    <hr className="border-gray-300 dark:border-gray-700 mb-6" />
+
     {/* 技能列表 */}
     <ul className="list-disc list-inside space-y-2">
       {category.items.map((skill, index) => (

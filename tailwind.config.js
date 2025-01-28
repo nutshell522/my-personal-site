@@ -12,7 +12,8 @@ export default {
           lightText: '#1F2937',
           darkText: '#F9FAFB',
           logoBg: '#FFFFFF',
-          logoText: '#6F7987',
+          logoText: '#1F2937',
+          logoTextDark: '#F9FAFB',
         },
         nav: {
           lightBg: '#F9FAFB',
@@ -54,6 +55,12 @@ export default {
       },
       width: {
         '40%': '40%',
+        '50%': '50%',
+        '60%': '60%',
+        '70%': '70%',
+        '80%': '80%',
+        '90%': '90%',
+        '110%': '110%',
         '120%': '120%',
       },
       fontSize: {

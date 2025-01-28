@@ -17,6 +17,8 @@ const ExperienceCard: React.FC<{ experience: ExperienceItem }> = ({
       {experience.position} | {experience.date}
     </p>
 
+    <hr className="border-gray-300 dark:border-gray-700 mb-6" />
+
     {/* 任務列表 */}
     <ul className="list-disc list-inside space-y-4">
       {experience.tasks.map((task, taskIndex) => (
